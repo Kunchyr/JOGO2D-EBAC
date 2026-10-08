@@ -3,8 +3,8 @@ guid: 019ce074f9e7aac4e8142693f242e40f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5961940834056544780
-    second: Picsart_26-10-07_14-04-14-480_0
+      213: -371740909335319690
+    second: Pufferfish_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Picsart_26-10-07_14-04-14-480_0
+      name: Pufferfish_0
       rect:
         serializedVersion: 2
         x: 457
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4fdd92e266ee24da0800000000000000
-      internalID: -5961940834056544780
+      spriteID: 67b669ecc9f47daf0800000000000000
+      internalID: -371740909335319690
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Picsart_26-10-07_14-04-14-480_0: -5961940834056544780
+      Pufferfish_0: -371740909335319690
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -3,8 +3,8 @@ guid: d19110798d3d7ea4487d11e94aa0f798
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -91753478512803754
-    second: Picsart_26-10-07_14-02-23-524_0
+      213: 868504884959497903
+    second: Shrimp_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Picsart_26-10-07_14-02-23-524_0
+      name: Shrimp_0
       rect:
         serializedVersion: 2
         x: 472
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 650865a82b60abef0800000000000000
-      internalID: -91753478512803754
+      spriteID: faec3b1679c8d0c00800000000000000
+      internalID: 868504884959497903
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Picsart_26-10-07_14-02-23-524_0: -91753478512803754
+      Shrimp_0: 868504884959497903
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
