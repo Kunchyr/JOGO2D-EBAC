@@ -1,18 +1,21 @@
-    using UnityEngine;
+using UnityEngine;
 
-    public class Player : MonoBehaviour
-    {
+public class Player : MonoBehaviour
+{
     public Animator animator;
     public Rigidbody2D rigidbody2D;
-    public Vector2 friction; //new Vector2(-.5f, 0);
+    public Vector2 friction;
     public float speed = 5f;
+    public float walkSpeed = 5f;
+    public float sprintSpeed = 10f;
     public float jumpForce = 10f;
+    public int direction;
 
     void Update()
     {
-    Movement();
-    Jump();
-    Sprint();
+        Movement();
+        Jump();
+        Sprint();
     }
 
     private void Movement()
@@ -36,12 +39,10 @@
 
         if(rigidbody2D.linearVelocity.x > 0)
         {
-            //rigidbody2D.linearVelocity -= new Vector2(friction.x, friction.y);
             rigidbody2D.linearVelocity += new Vector2(-.5f, 0);
         }
         else if (rigidbody2D.linearVelocity.x < 0)
         {
-            //rigidbody2D.linearVelocity += new Vector2(friction.x, friction.y);
             rigidbody2D.linearVelocity -= new Vector2(-.5f, 0);
         }
     }
@@ -56,12 +57,12 @@
     {
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            speed = 10f;
+            speed = sprintSpeed;
             animator.speed = 2f;
     }
         else
         {
-            speed = 5f;
+            speed = walkSpeed;
             animator.speed = 1f;
     }
     }

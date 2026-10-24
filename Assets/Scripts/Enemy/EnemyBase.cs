@@ -2,15 +2,22 @@ using UnityEngine;
 
 public class EnemyBase : MonoBehaviour
 {
+    public HealthBase healthBase;
     public float damage = 10f;
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Colidiu com: " + collision.name);
-        var health = collision.GetComponent<HealthBase>();
+        Debug.Log("Colidiu com: " + collision.gameObject.name);
+        var health = collision.gameObject.GetComponent<HealthBase>();
 
         if (health != null)
         {
         health.TakeDamage(damage);
         }
     }
+
+    public void Damage(float damage)
+    {
+        healthBase.TakeDamage(damage);
+    }
+
 }
