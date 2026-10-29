@@ -4,7 +4,7 @@ using TMPro;
 public class CollectablesManager : MonoBehaviour
 {
     public static CollectablesManager Instance;
-    public int coins = 0;
+    public SOInt coins;
     public TMP_Text textHudCoinText;
 
     private void Awake()
@@ -24,12 +24,12 @@ public class CollectablesManager : MonoBehaviour
     }
     private void Reset()
     {
-        coins = 0;
+        coins.value = 0;
     }
     public void AddCoin(int amount = 1)
     {
-        coins+= amount;
-        textHudCoinText.text = "x " + coins.ToString();
-        Debug.Log("Coins: " + coins);
+        coins.value += amount;
+        textHudCoinText.text = "x " + coins.value.ToString();
+        Debug.Log("Coins: " + coins.value);
     }
 }
