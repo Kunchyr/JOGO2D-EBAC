@@ -5,11 +5,11 @@ public class Player : MonoBehaviour
     public Animator animator;
     public Rigidbody2D rigidbody2D;
     public Vector2 friction;
-    public float speed = 5f;
-    public float walkSpeed = 5f;
-    public float sprintSpeed = 10f;
-    public float jumpForce = 10f;
     public int direction;
+
+    [Header("Setup")]
+    public SOPlayer_Status playerStatus;
+
 
     void Update()
     {
@@ -23,13 +23,13 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             rigidbody2D.transform.localScale = new Vector3(1, 1, 1);
-            rigidbody2D.linearVelocity = new Vector2(-speed, rigidbody2D.linearVelocity.y);
+            rigidbody2D.linearVelocity = new Vector2(-playerStatus.speed, rigidbody2D.linearVelocity.y);
             animator.SetBool("isRun", true);
         }
         else if (Input.GetKey(KeyCode.D))
         {
             rigidbody2D.transform.localScale = new Vector3(-1, 1, 1);
-            rigidbody2D.linearVelocity = new Vector2(+speed, rigidbody2D.linearVelocity.y);
+            rigidbody2D.linearVelocity = new Vector2(+playerStatus.speed, rigidbody2D.linearVelocity.y);
             animator.SetBool("isRun", true);
         }
         else
@@ -50,19 +50,19 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            rigidbody2D.linearVelocity = new Vector2(rigidbody2D.linearVelocity.x, jumpForce);
+            rigidbody2D.linearVelocity = new Vector2(rigidbody2D.linearVelocity.x, playerStatus.jumpForce);
         }
     }   
     private void Sprint()
     {
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            speed = sprintSpeed;
+            playerStatus.speed = playerStatus.sprintSpeed;
             animator.speed = 2f;
     }
         else
         {
-            speed = walkSpeed;
+            playerStatus.speed = playerStatus.walkSpeed;
             animator.speed = 1f;
     }
     }
