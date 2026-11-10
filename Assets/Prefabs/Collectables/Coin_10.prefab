@@ -132,7 +132,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.563, y: 2.2910001}
+    oldSize: {x: 1.2815, y: 1.1455001}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -153,4 +153,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectableBaseCoin
   collectableTag: Player
+  particleSystem: {fileID: 5225883065977560345, guid: 10093a9e5ac31ac44b4986cd4ccd261a, type: 3}
   coinValue: 10

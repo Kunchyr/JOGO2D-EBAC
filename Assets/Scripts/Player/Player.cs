@@ -59,11 +59,11 @@ public class Player : MonoBehaviour
         {
             playerStatus.speed = playerStatus.sprintSpeed;
             animator.speed = 2f;
-    }
+        }
         else
         {
             playerStatus.speed = playerStatus.walkSpeed;
             animator.speed = 1f;
-    }
+        }
     }
 }
